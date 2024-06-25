@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+header {
+    background-color: #bcfffc;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 25px;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(94, 94, 94);
+    justify-content: space-around;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+    margin: 5px;
+}
+nav a:hover {
+    color: black;
+    background-color: #bcfffc;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5%;
+    padding-top: 45px;
+    margin: 50px auto;
+    max-width: 75%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+.card {
+    border-radius: 10%;
+    border: 1px gray solid;
+    overflow: hidden;
+}
+
+.card div {
+    padding: 20px;
+    line-height: 2.5em;
+}
+
+.card ul {
+    height: 50%;
+    margin: auto;
+}
+
+.card img {
+    float: left;
+    display: inline;
+    padding: 20px;
+}
+
+.cardHeading {
+    background-color: #bcfffc;
+    margin: 0;
+    padding: 0.15em;
+}
+
+h1, h2 {
+    font-family: "Roboto Slab", "Times New Roman", serif;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(94, 94, 94);
+    color: #bcfffc;
+    text-align: center;
+}
