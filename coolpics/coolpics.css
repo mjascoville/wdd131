@@ -1,131 +1,126 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 :root {
-	--primary-color: #52489c;
-	--secondary-color: #59c3c3;
-	--accent-color: #f45b69;
-	--text-dark: #333;
-	--text-light: #ebebeb;
-	--primary-font: Arial, Helvetica,sans-serif;
-	--secondary-font: Mooli, san-serif;
+  --clr-main: #52489c;
+  --clr-accent: #59c3c3;
+  --clr-bg: #ebebeb;
+  --clr-dark: #333;
+  --font-main: Arial, Helvetica, sans-serif;
+  --font-alt: "Mooli", sans-serif;
 }
 
-dialog {
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
-	text-align: center;
-	overflow: hidden;
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--clr-bg);
+  color: var(--clr-dark);
+  line-height: 1.4;
 }
 
-dialog img {
-	margin: 20vh auto;
-	max-width: 80%;
-	max-height: 70%;
+header,
+footer {
+  background-color: var(--clr-main);
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
 
-.close-viewer {
-	position: absolute;
-	top: 20vh;
+h1,
+h2 {
+  font-family: var(--font-alt);
+  margin: 0.5em 0;
 }
+
+.toggle-nav {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 0.9rem;
+}
+
 
 .hidden {
-	display: none;
-}
-
-html, body {
-	margin: 0;
-	padding: 0;
-	font-family: var(--primary-font);
-	font-size: 1.2em;
-	background-color: var(--text-light);
-	color: var(--text-dark);
-	line-height: 1em;
-}
-
-h1 {
-	font-family: Mooli;
-}
-
-header {
-	text-align: center;
-	padding: 10px;
-}
-
-#menu-button {
-	border: none;
-	box-shadow: 0;
-	background-color: #0000;
-	color: white;
-	font-size: 1em;
-}
-
-header a {
-	color: white;
-	display: block;
-	font-size: 0.75em;
-}
-
-main {
-	padding: 10px;
-}
-
-main h1 {
-	font-size: 1em;
-	text-align: center;
-	color: black;
+  display: none;
 }
 
 .gallery {
-	width: fit-content;
-	margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .gallery figure {
-	border-width: 5px;
-	border-color: white;
-	border-style: solid;
-	box-shadow: 5px 5px 5px;
-	padding: 0;
+  margin: 0;
+  border: 5px solid white;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .gallery img {
-	display: block;
-	max-width: 100%;
-	width: 250px;
-	height: 250px;
-	object-fit: cover;
+  display: block;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
-header, footer {
-	background-color: var(--primary-color);
-	color: var(--text-light);
+dialog.viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 
-footer {
-	padding: 15px;
-	padding-left: 15%;
+dialog.viewer img {
+  width: 90%;
+  max-height: 80%;
 }
 
-@media screen and (min-width: 700px) {
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
+.close-btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: white;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 1000px) {
-	header button {
-		display: none;
-	}
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  }
+}
 
-	header a {
-		display: initial;
-		margin: auto 5%;
-	}
+@media (min-width: 1000px) {
+  .toggle-nav {
+    display: none;
+  }
 
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-	}
+  .nav-links {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    margin: 0 1rem;
+  }
 }
