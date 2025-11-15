@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Michael Scoville">
+  <title>RecipeBook</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <meta name="description" content="A collection of delicious recipes with ratings, ingredients, and instructions.">
+
+  <meta property="og:title" content="RecipeBook">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="A collection of delicious recipes with ratings, ingredients, and instructions.">
+  <meta property="og:image" content="images/chicken-curry.webp">
+  <meta property="og:url" content="https://mjascoville.github.io/wdd131/recipes/index.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="recipes.css">
+</head>
+
+
+<body>
+
+  <header>
+    <div class="logo-title">
+      <img src="images/recipe-book.png" alt="Recipe Book Logo">
+      <h1>RecipeBook</h1>
+    </div>
+
+    <form class="search-form">
+      <input type="text" placeholder="Find a recipe" aria-label="Search recipes">
+      <button type="submit" aria-label="Search">
+        <img src="images/search.svg" alt="">
+      </button>
+    </form>
+  </header>
+
+  <main>
+
+    <section class="recipe">
+      <img src="images/chicken-curry.webp" alt="Chicken Curry">
+
+      <div class="recipe-info">
+
+        <span class="tag">entree</span>
+
+        <h2>Chicken Curry</h2>
+
+        <span
+          class="rating"
+          role="img"
+          aria-label="Rating: 5 out of 5 stars"
+        >
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+        </span>
+
+        <p>
+          Quick and easy Chicken curry recipe made with easy to find ingredients.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="attribution">
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
+        Recipe icons created by Freepik - Flaticon
+      </a>
+    </p>
+
+    <div class="social">
+      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+      <a href="#"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
+      <a href="#"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
+      <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
+    </div>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
