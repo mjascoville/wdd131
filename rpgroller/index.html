@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Old-School Character Roller</title>
+
+  <meta name="description" content="Generate old-school tabletop RPG characters with 3d6 ability scores, select a class, and save characters locally." />
+  <meta name="author" content="Michael Scoville" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav__link nav__link--active" href="index.html">Home</a>
+
+      <div class="nav__title">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Old-School Character Roller logo" class="nav__logo" />
+        </a>
+      </div>
+
+      <a class="nav__link" href="tavern.html">Tavern</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="banner" aria-label="Banner image">
+      <img class="banner__img" src="images/dice.png" alt="20-sided die image" />
+    </section>
+
+    <section class="intro">
+      <p>
+        Welcome to the Old-School Character Roller! Here you can generate characters quickly and easily by using the roll button and dropdown menus.
+        Simply roll for your stats, select the class you want, and name your character. You can save these characters, which will send them to the Tavern.
+        This is where you will be able to view all of the characters you've made.
+      </p>
+    </section>
+
+    <section class="roller" aria-label="Character roller">
+      <div class="roller__inputs">
+        <div class="field">
+          <label class="field__label" for="characterName">Character Name:</label>
+          <input class="field__input" id="characterName" name="characterName" type="text" maxlength="30" />
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="characterClass">Class:</label>
+          <select class="field__select" id="characterClass" name="characterClass">
+            <option value="">Select...</option>
+            <option value="Fighter">Fighter</option>
+            <option value="Thief">Thief</option>
+            <option value="Cleric">Cleric</option>
+            <option value="Magic-User">Magic-User</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="scores" aria-live="polite">
+        <h2 class="scores__title">Ability Scores:</h2>
+
+        <div class="scores__grid">
+          <div class="scores__col">
+            <p><span class="scores__label">Strength:</span> <span id="str">—</span></p>
+            <p><span class="scores__label">Dexterity:</span> <span id="dex">—</span></p>
+            <p><span class="scores__label">Constitution:</span> <span id="con">—</span></p>
+          </div>
+
+          <div class="scores__col">
+            <p><span class="scores__label">Intelligence:</span> <span id="int">—</span></p>
+            <p><span class="scores__label">Wisdom:</span> <span id="wis">—</span></p>
+            <p><span class="scores__label">Charisma:</span> <span id="cha">—</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="button" id="rollBtn">Roll</button>
+        <button class="btn" type="button" id="saveBtn">Save</button>
+      </div>
+
+      <p class="status" id="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Characters are saved locally in your browser on this device.</p>
+    <p class="credits">
+      <a href="https://www.flaticon.com/free-icons/d20" title="d20 icons">D20 icons created by Freepik - Flaticon</a>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

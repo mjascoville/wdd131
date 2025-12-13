@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Tavern</title>
+
+  <meta name="description" content="View all saved characters from the Old-School Character Roller." />
+  <meta name="author" content="Michael Scoville" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav__link" href="index.html">Home</a>
+
+      <div class="nav__title">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Old-School Character Roller logo" class="nav__logo" />
+        </a>
+      </div>
+
+      <a class="nav__link nav__link--active" href="tavern.html">Tavern</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="banner" aria-label="Banner image">
+      <img class="banner__img" src="images/tavern.png" alt="tavern image" />
+    </section>
+
+    <section class="intro">
+      <p>Welcome to the Tavern! Here you can view all of the characters you've saved previously.</p>
+    </section>
+
+    <section class="tavern" aria-label="Saved characters">
+      <div class="tavern__picker">
+        <label class="field__label" for="characterSelect">Characters in the Tavern:</label>
+        <select class="field__select" id="characterSelect">
+          <option value="">Select a character...</option>
+        </select>
+      </div>
+
+      <section class="sheet" aria-label="Character sheet">
+        <div class="sheet__top">
+          <p><span class="sheet__label">Name:</span> <span id="sheetName">—</span></p>
+          <p><span class="sheet__label">Class:</span> <span id="sheetClass">—</span></p>
+        </div>
+
+        <div class="sheet__grid" aria-live="polite">
+          <div class="sheet__col">
+            <p><span class="sheet__label">Str:</span> <span id="sheetStr">—</span></p>
+            <p><span class="sheet__label">Dex:</span> <span id="sheetDex">—</span></p>
+            <p><span class="sheet__label">Con:</span> <span id="sheetCon">—</span></p>
+          </div>
+
+          <div class="sheet__col">
+            <p><span class="sheet__label">Int:</span> <span id="sheetInt">—</span></p>
+            <p><span class="sheet__label">Wis:</span> <span id="sheetWis">—</span></p>
+            <p><span class="sheet__label">Cha:</span> <span id="sheetCha">—</span></p>
+          </div>
+        </div>
+
+        <p class="status" id="tavernStatus" aria-live="polite"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Characters are saved locally in your browser on this device.</p>
+    <p class="credits">
+      <a href="https://www.flaticon.com/free-icons/wayfinding" title="wayfinding icons">Wayfinding icons created by mj - Flaticon</a>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
